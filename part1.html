@@ -15,24 +15,21 @@
 		<img href="docs/header.png"></img>
 		<h3>Creating a machine learning toolkit</h3>
 
-        <h5>[5/21 to 5/30, 1.5 weeks]</h5>
-		<ul>
-			<li>Study the dataset to determine statistical information (Python StatsModel). Generate a 2D plot for each pair of features, color-coded by cluster.</li>
-			<li>Implement Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC) as a performance measure.</li>
-			<li>Test out different kernels and tune parameters.</li>
-			<li>Test the algorithm on 2 datasets: SAS (high-latitude) and a midlatitude radar. Document and debug problems.</li>
-			<li>Create a poster for the SuperDARN workshop (6/3 thru 6/8). Use lots of graphs with good descriptions. Due 5/30.</li>
-		</ul>
-
 		<h5>[5/31 to 6/8, 1.5 weeks]</h5>
 		<ul>
+			<li>Study the dataset to determine statistical information (Python StatsModel).</li>
 			<li>Clean up code. Put in a virtual environment.</li>
 			<li>Create a GitHub toolkit with the code.</li>
 			<li>Produce online documentation.</li>
 		</ul>
 
         <h3>Work Log</h3>
-		<p>Not started yet!</p>
+	    <p><b>Done:</b> Implement Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC) as a performance measure.</p>
+	    <p>With all 7 features and on all 16 beams, AIC and BIC will just keep decreasing (low score means better model) up to 100 clusters, where it becomes way too computationally expensive to be practical. However, with just 1-2 of the most Gaussian looking features, AIC and BIC show the best model fit for 5-10 clusters. </p>
+	    <p>Some of the features look very Gaussian, like velocity and spectral width, and some don't like beam and power.</p>
+	    <p>5-10 clusters seems to make the most physical sense, where 100 seems like it is overfitting. To make the Gaussian model make sense and not use a huge number of clusters to try to fit something not meant to be fit by a Gaussian, we are considering dropping the features that do not look Gaussian. Alternatively, they could be transformed using a method like Box Cox.</p>
+	    <p>Next I will apply forward/backward selection using AIC and BIC to do feature selection, combined with some physical reasoning about what features make sense for GMM.</p>
+	    
       </div>
     </div>
   </div>
