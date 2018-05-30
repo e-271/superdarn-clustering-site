@@ -30,7 +30,7 @@
 	    <p>5-10 clusters seems to make the most physical sense, where 100 seems like it is overfitting. To make the Gaussian model make sense and not use a huge number of clusters to try to fit something not meant to be fit by a Gaussian, we are considering dropping the features that do not look Gaussian. Alternatively, they could be transformed using a method like Box Cox.</p>
 	    <p>Next I will apply forward/backward selection using AIC and BIC to do feature selection, combined with some physical reasoning about what features make sense for GMM.</p>
 	    <p><b>Done:</b> Create a poster for the SuperDARN workshop (6/3 thru 6/8). Use lots of graphs with good descriptions. Due 5/30.</p>
-	    <a href="docs/robb_superdarn_clustering.pdf">Poster for SuperDARN workshop 2018</a>
+	    <p><a href="docs/robb_superdarn_clustering.pdf">Poster for SuperDARN workshop 2018</a></p>
 	    <p><b>Done:</b> Test the algorithm on 2 datasets: SAS (high-latitude) and a midlatitude radar. Document and debug problems.</p>
 	    <p>The poster above shows a comparison of SAS (high-latitude) vs. CVW (mid-latitude) on Feb 7 2018 (good data, no dual-frequency on this day). They are both doing better than the traditional model, but on CVW on that day some IS is being misclassified as GS on other beams that are not shown there (you can see evidence of this in Figure 10 at range gate 20 - there should not be a bump in both IS and GS in the same range gate).</p>
 	    <p>Next steps here is to study a few days of data, and figure out a better evaluation criteria than what we are currently using (median |velocity| > 15 m/s). Some options are to use a ratio of high:low velocity like in Ribeiro et. al., or to base it on velocity and spectral width like the traditional method does.</p>
