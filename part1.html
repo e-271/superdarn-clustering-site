@@ -34,7 +34,7 @@
 	    <p>Some of the features look very Gaussian, like velocity and spectral width, and some don't like beam and power.</p>
 	    <p>5-10 clusters seems to make the most physical sense, where 100 seems like it is overfitting. To make the Gaussian model make sense and not use a huge number of clusters to try to fit something not meant to be fit by a Gaussian, we are considering dropping the features that do not look Gaussian. Alternatively, they could be transformed using a method like Box Cox.</p>
 	    
-	    <h5>Model Selection</h5>
+	    <h5>Model Selection<b>[will need more work]</b></h5>
 	    <p>Rather than testing kernels (more relevant to Gaussian Process than GMM), I implemented forwards selection to do model selection. However, the results of this are hard to interpret, so this will require more time. The features that make the most 'physical sense' are not the ones being chosen by forward selection - probably because it is just choosing the features that it can best fit with a Gaussian, rather than the ones that might most likely correspond to the IS and GS labels. Backwards selection may tell us more, as it has some advantages over forwards selection.</p>
 	    
 	    <h5>Test the algorithm on 2 datasets: SAS (high-latitude) and a midlatitude radar. Document and debug problems.<b>[done]</b></h5>
