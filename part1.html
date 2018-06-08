@@ -15,15 +15,7 @@
 		<img href="docs/header.png"></img>
 		<h3>Creating a machine learning toolkit</h3>
 
-	       <h5>[5/30 - 6/8, 1.5 weeks]</h5>
-		<ul>
-			<li>Study the dataset to determine statistical information (Python StatsModel).</li>
-			<li>Clean up code. Put in a virtual environment.</li>
-			<li>Create a GitHub toolkit with the code.</li>
-			<li>Produce online documentation.</li>
-		</ul>
-
-        <h3>Work Log</h3>
+        <h4>Work Log</h4>
 	    
 	    <h5>Study the dataset to determine statistical information (Python StatsModel). <b>[done]</b></h5>
 	    <p>See the poster and slides for graphs, or contact me for more graphs. Velocity and spectral width appear Gaussian, but other features such as phi0, power, and beam are not at all Gaussian. GMM is doing a decent job regardless, but it will always pull all the outlier points into one big high-variance cluster. We need to figure out how to deal with the outliers: either using transformations to squash the data such as BoxCox, or figuring out how to get rid of noise (PCA has not yet done the trick, you still see the noise grouped in to 1 cluster, but maybe with the right parameters / features PCA would do it).</p>
