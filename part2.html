@@ -21,6 +21,8 @@
 			<li>Produce a report on the results of validation, and update the GitHub repository with the new code and documentation.</li>
 		</ul>
         <h4>Work Log</h4>
+	      <p>Validation:</p>
+	      <img src="docs/validation.png">
 	      	<p>Grid-based DBSCAN:</p> 
 		<p>I implemented and debugged the Grid-based DBSCAN algorithm based on Kellner et al. My version also has an epsilon value for time, so it considers temporal aspects unlike the Kellner algorithm. It seems to work pretty well, but it's really slow compared to sklearn's regular DBSCAN, too slow to be practical for more than 2-4h data. I've been looking at their code, and am thinking about adapting it to this algorithm. I think their method is O(n) or O(nlog(n)) processor but O(n^2) memory, where mine is O(n^2) processor with small memory footprint. However, it runs slow.</p>
 	      	<p>DBSCAN + GMM + BoxCox:</p>
